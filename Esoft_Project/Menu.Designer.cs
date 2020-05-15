@@ -28,25 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Logo = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.buttonOpenClients = new System.Windows.Forms.Button();
             this.buttonOpenAgents = new System.Windows.Forms.Button();
             this.buttonOpenRealEstates = new System.Windows.Forms.Button();
             this.buttonOpenDemands = new System.Windows.Forms.Button();
             this.buttonOpenSupplies = new System.Windows.Forms.Button();
             this.buttonOpenDeals = new System.Windows.Forms.Button();
+            this.Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Logo
-            // 
-            this.Logo.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.Logo.Location = new System.Drawing.Point(6, 20);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(265, 100);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 0;
-            this.Logo.TabStop = false;
             // 
             // buttonOpenClients
             // 
@@ -84,6 +75,7 @@
             this.buttonOpenRealEstates.TabIndex = 3;
             this.buttonOpenRealEstates.Text = "Объекты недвижимости";
             this.buttonOpenRealEstates.UseVisualStyleBackColor = false;
+            this.buttonOpenRealEstates.Click += new System.EventHandler(this.ButtonOpenRealEstates_Click);
             // 
             // buttonOpenDemands
             // 
@@ -121,6 +113,16 @@
             this.buttonOpenDeals.Text = "Сделка";
             this.buttonOpenDeals.UseVisualStyleBackColor = false;
             // 
+            // Logo
+            // 
+            this.Logo.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.Logo.Location = new System.Drawing.Point(6, 20);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(265, 100);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 0;
+            this.Logo.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -133,6 +135,7 @@
             this.Controls.Add(this.buttonOpenAgents);
             this.Controls.Add(this.buttonOpenClients);
             this.Controls.Add(this.Logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Esoft";
