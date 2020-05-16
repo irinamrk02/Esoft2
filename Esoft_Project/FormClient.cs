@@ -12,8 +12,8 @@ namespace Esoft_Project
 {
     public partial class FormClient : Form
     {
-        private void ShowClient()
-        {
+         void ShowClient()
+         {
             listViewClient.Items.Clear();
             foreach (ClientsSet clientsSet in Program.wftDb.ClientsSet)
             {

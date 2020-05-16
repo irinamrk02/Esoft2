@@ -579,6 +579,7 @@ namespace Esoft_Project
                     textBoxAddress_Number.Text = "";
                     textBoxCoordinate_Iatitude.Text = "";
                     textBoxCoordinate_Iongitude.Text = "";
+                    textBoxTotalArea.Text = "";
                 }
 
             }

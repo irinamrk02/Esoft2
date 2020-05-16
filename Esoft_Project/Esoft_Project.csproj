@@ -55,8 +55,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agentset.cs">
+      <DependentUpon>ModelTutorial.tt</DependentUpon>
+    </Compile>
     <Compile Include="ClientsSet.cs">
       <DependentUpon>ModelTutorial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgentset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgentset.Designer.cs">
+      <DependentUpon>FormAgentset.cs</DependentUpon>
     </Compile>
     <Compile Include="FormClient.cs">
       <SubType>Form</SubType>
@@ -96,6 +105,9 @@
     <Compile Include="RealEstateSet.cs">
       <DependentUpon>ModelTutorial.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAgentset.resx">
+      <DependentUpon>FormAgentset.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
     </EmbeddedResource>

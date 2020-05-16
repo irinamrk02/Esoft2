@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Хранилище WFTutorialModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Agentset">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MiddleName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DealShare" Type="int" />
+        </EntityType>
         <EntityType Name="ClientsSet">
           <Key>
             <PropertyRef Name="id" />
@@ -34,6 +44,7 @@
           <Property Name="Floor" Type="int" />
         </EntityType>
         <EntityContainer Name="Хранилище WFTutorialModelContainer">
+          <EntitySet Name="Agentset" EntityType="Self.Agentset" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ClientsSet" EntityType="Self.ClientsSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RealEstateSet" EntityType="Self.RealEstateSet" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -42,6 +53,16 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WFTutorialModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Agentset">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DealShare" Type="Int32" />
+        </EntityType>
         <EntityType Name="ClientsSet">
           <Key>
             <PropertyRef Name="id" />
@@ -71,6 +92,7 @@
           <Property Name="Floor" Type="Int32" />
         </EntityType>
         <EntityContainer Name="WFTutorialEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Agentset" EntityType="Self.Agentset" />
           <EntitySet Name="ClientsSet" EntityType="Self.ClientsSet" />
           <EntitySet Name="RealEstateSet" EntityType="Self.RealEstateSet" />
         </EntityContainer>
@@ -80,6 +102,17 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Хранилище WFTutorialModelContainer" CdmEntityContainer="WFTutorialEntities">
+          <EntitySetMapping Name="Agentset">
+            <EntityTypeMapping TypeName="WFTutorialModel.Agentset">
+              <MappingFragment StoreEntitySet="Agentset">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DealShare" ColumnName="DealShare" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ClientsSet">
             <EntityTypeMapping TypeName="WFTutorialModel.ClientsSet">
               <MappingFragment StoreEntitySet="ClientsSet">
