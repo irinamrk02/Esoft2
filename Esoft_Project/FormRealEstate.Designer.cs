@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRealEstate));
-            this.textBoxCoordinate_latitude = new System.Windows.Forms.TextBox();
+            this.textBoxCoordinate_Iatitude = new System.Windows.Forms.TextBox();
             this.textBoxTotalArea = new System.Windows.Forms.TextBox();
             this.textBoxAddress_City = new System.Windows.Forms.TextBox();
             this.textBoxAddress_Street = new System.Windows.Forms.TextBox();
@@ -38,7 +38,7 @@
             this.textBoxRooms = new System.Windows.Forms.TextBox();
             this.textBoxFloor = new System.Windows.Forms.TextBox();
             this.textBoxTotalFloors = new System.Windows.Forms.TextBox();
-            this.textBoxCoordinate_longitude = new System.Windows.Forms.TextBox();
+            this.textBoxCoordinate_Iongitude = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelAddress_City = new System.Windows.Forms.Label();
             this.labelTotalArea = new System.Windows.Forms.Label();
@@ -85,13 +85,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBoxCoordinate_latitude
+            // textBoxCoordinate_Iatitude
             // 
-            this.textBoxCoordinate_latitude.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCoordinate_latitude.Location = new System.Drawing.Point(20, 352);
-            this.textBoxCoordinate_latitude.Name = "textBoxCoordinate_latitude";
-            this.textBoxCoordinate_latitude.Size = new System.Drawing.Size(202, 32);
-            this.textBoxCoordinate_latitude.TabIndex = 1;
+            this.textBoxCoordinate_Iatitude.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCoordinate_Iatitude.Location = new System.Drawing.Point(20, 352);
+            this.textBoxCoordinate_Iatitude.Name = "textBoxCoordinate_Iatitude";
+            this.textBoxCoordinate_Iatitude.Size = new System.Drawing.Size(202, 32);
+            this.textBoxCoordinate_Iatitude.TabIndex = 1;
+            this.textBoxCoordinate_Iatitude.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxCoordinate_Iatitude_KeyPress);
             // 
             // textBoxTotalArea
             // 
@@ -100,6 +101,7 @@
             this.textBoxTotalArea.Name = "textBoxTotalArea";
             this.textBoxTotalArea.Size = new System.Drawing.Size(202, 32);
             this.textBoxTotalArea.TabIndex = 2;
+            this.textBoxTotalArea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxTotalArea_KeyPress);
             // 
             // textBoxAddress_City
             // 
@@ -157,13 +159,14 @@
             this.textBoxTotalFloors.Size = new System.Drawing.Size(202, 32);
             this.textBoxTotalFloors.TabIndex = 9;
             // 
-            // textBoxCoordinate_longitude
+            // textBoxCoordinate_Iongitude
             // 
-            this.textBoxCoordinate_longitude.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxCoordinate_longitude.Location = new System.Drawing.Point(20, 415);
-            this.textBoxCoordinate_longitude.Name = "textBoxCoordinate_longitude";
-            this.textBoxCoordinate_longitude.Size = new System.Drawing.Size(202, 32);
-            this.textBoxCoordinate_longitude.TabIndex = 10;
+            this.textBoxCoordinate_Iongitude.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCoordinate_Iongitude.Location = new System.Drawing.Point(20, 415);
+            this.textBoxCoordinate_Iongitude.Name = "textBoxCoordinate_Iongitude";
+            this.textBoxCoordinate_Iongitude.Size = new System.Drawing.Size(202, 32);
+            this.textBoxCoordinate_Iongitude.TabIndex = 10;
+            this.textBoxCoordinate_Iongitude.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxCoordinate_Iongitude_KeyPress);
             // 
             // pictureBox1
             // 
@@ -271,9 +274,9 @@
             this.labelCoordinate_latitude.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCoordinate_latitude.Location = new System.Drawing.Point(10, 325);
             this.labelCoordinate_latitude.Name = "labelCoordinate_latitude";
-            this.labelCoordinate_latitude.Size = new System.Drawing.Size(84, 24);
+            this.labelCoordinate_latitude.Size = new System.Drawing.Size(83, 24);
             this.labelCoordinate_latitude.TabIndex = 21;
-            this.labelCoordinate_latitude.Text = "Ширина";
+            this.labelCoordinate_latitude.Text = "Широта";
             // 
             // labelAddress_House
             // 
@@ -393,6 +396,7 @@
             this.buttonDel.TabIndex = 31;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
+            this.buttonDel.Click += new System.EventHandler(this.ButtonDel_Click);
             // 
             // buttonAdd
             // 
@@ -486,7 +490,7 @@
             this.listViewRealEstateSet_Land.FullRowSelect = true;
             this.listViewRealEstateSet_Land.GridLines = true;
             this.listViewRealEstateSet_Land.HideSelection = false;
-            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(241, 25);
+            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(243, 25);
             this.listViewRealEstateSet_Land.MultiSelect = false;
             this.listViewRealEstateSet_Land.Name = "listViewRealEstateSet_Land";
             this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(1073, 611);
@@ -555,7 +559,7 @@
             this.Controls.Add(this.labelTotalArea);
             this.Controls.Add(this.labelAddress_City);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBoxCoordinate_longitude);
+            this.Controls.Add(this.textBoxCoordinate_Iongitude);
             this.Controls.Add(this.textBoxTotalFloors);
             this.Controls.Add(this.textBoxFloor);
             this.Controls.Add(this.textBoxRooms);
@@ -564,7 +568,7 @@
             this.Controls.Add(this.textBoxAddress_Street);
             this.Controls.Add(this.textBoxAddress_City);
             this.Controls.Add(this.textBoxTotalArea);
-            this.Controls.Add(this.textBoxCoordinate_latitude);
+            this.Controls.Add(this.textBoxCoordinate_Iatitude);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRealEstate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -577,7 +581,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBoxCoordinate_latitude;
+        private System.Windows.Forms.TextBox textBoxCoordinate_Iatitude;
         private System.Windows.Forms.TextBox textBoxTotalArea;
         private System.Windows.Forms.TextBox textBoxAddress_City;
         private System.Windows.Forms.TextBox textBoxAddress_Street;
@@ -586,7 +590,7 @@
         private System.Windows.Forms.TextBox textBoxRooms;
         private System.Windows.Forms.TextBox textBoxFloor;
         private System.Windows.Forms.TextBox textBoxTotalFloors;
-        private System.Windows.Forms.TextBox textBoxCoordinate_longitude;
+        private System.Windows.Forms.TextBox textBoxCoordinate_Iongitude;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelAddress_City;
         private System.Windows.Forms.Label labelTotalArea;
