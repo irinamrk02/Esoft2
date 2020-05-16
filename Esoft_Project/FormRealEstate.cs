@@ -213,11 +213,11 @@ namespace Esoft_Project
 
                 if (realEstate.Coordinate_Iatitude < -90 || realEstate.Coordinate_Iatitude > 90)
                 {
-                    throw new Exception("Широта может принимать значения от -90 до +90");
+                    throw new Exception("Широта принимает значения только от -90 до +90");
                 }
                 if (realEstate.Coordinate_Iongitude < -180 || realEstate.Coordinate_Iongitude > 180)
                 {
-                    throw new Exception("Долгота может принимать значения от -180 до +180");
+                    throw new Exception("Долгота принимает значения только от -180 до +180");
                 }
 
 
@@ -329,11 +329,11 @@ namespace Esoft_Project
 
                         if (realEstate.Coordinate_Iatitude < -90 || realEstate.Coordinate_Iatitude > 90)
                         {
-                            throw new Exception("Широта может принимать значения от -90 до +90");
+                            throw new Exception("Широта принимает значения только от -90 до +90");
                         }
                         if (realEstate.Coordinate_Iongitude < -180 || realEstate.Coordinate_Iongitude > 180)
                         {
-                            throw new Exception("Долгота может принимать значения от -180 до +180");
+                            throw new Exception("Долгота принимает значения только от -180 до +180");
                         }
 
                         Program.wftDb.SaveChanges();
@@ -391,11 +391,11 @@ namespace Esoft_Project
 
                         if (realEstate.Coordinate_Iatitude < -90 || realEstate.Coordinate_Iatitude > 90)
                         {
-                            throw new Exception("Широта может принимать значения от -90 до +90");
+                            throw new Exception("Широта принимает значения только от -90 до +90");
                         }
                         if (realEstate.Coordinate_Iongitude < -180 || realEstate.Coordinate_Iongitude > 180)
                         {
-                            throw new Exception("Долгота может принимать значения от -180 до +180");
+                            throw new Exception("Долгота принимает значения только от -180 до +180");
                         }
 
                         Program.wftDb.SaveChanges();
@@ -444,11 +444,11 @@ namespace Esoft_Project
 
                         if (realEstate.Coordinate_Iatitude < -90 || realEstate.Coordinate_Iatitude > 90)
                         {
-                            throw new Exception("Широта может принимать значения от -90 до +90");
+                            throw new Exception("Широта принимает значения только от -90 до +90");
                         }
                         if (realEstate.Coordinate_Iongitude < -180 || realEstate.Coordinate_Iongitude > 180)
                         {
-                            throw new Exception("Долгота может принимать значения от -180 до +180");
+                            throw new Exception("Долгота принимает значения только от -180 до +180");
                         }
 
                         Program.wftDb.SaveChanges();
