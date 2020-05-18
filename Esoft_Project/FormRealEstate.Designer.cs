@@ -39,7 +39,6 @@
             this.textBoxFloor = new System.Windows.Forms.TextBox();
             this.textBoxTotalFloors = new System.Windows.Forms.TextBox();
             this.textBoxCoordinate_Iongitude = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelAddress_City = new System.Windows.Forms.Label();
             this.labelTotalArea = new System.Windows.Forms.Label();
             this.labelAddress_Number = new System.Windows.Forms.Label();
@@ -82,6 +81,7 @@
             this.columnCoordinate_latitudeLand = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnCoordinate_longitudeLand = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnTotalAreaLand = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,16 +167,6 @@
             this.textBoxCoordinate_Iongitude.Size = new System.Drawing.Size(202, 32);
             this.textBoxCoordinate_Iongitude.TabIndex = 10;
             this.textBoxCoordinate_Iongitude.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxCoordinate_Iongitude_KeyPress);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // labelAddress_City
             // 
@@ -490,7 +480,7 @@
             this.listViewRealEstateSet_Land.FullRowSelect = true;
             this.listViewRealEstateSet_Land.GridLines = true;
             this.listViewRealEstateSet_Land.HideSelection = false;
-            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(243, 25);
+            this.listViewRealEstateSet_Land.Location = new System.Drawing.Point(241, 25);
             this.listViewRealEstateSet_Land.MultiSelect = false;
             this.listViewRealEstateSet_Land.Name = "listViewRealEstateSet_Land";
             this.listViewRealEstateSet_Land.Size = new System.Drawing.Size(1073, 611);
@@ -534,6 +524,16 @@
             // 
             this.columnTotalAreaLand.Text = "Площадь";
             this.columnTotalAreaLand.Width = 111;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // FormRealEstate
             // 

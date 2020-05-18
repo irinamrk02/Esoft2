@@ -34,5 +34,17 @@ namespace Esoft_Project
             Form formAgents = new FormAgentset();
             formAgents.Show();
         }
+
+        private void ButtonOpenDemands_Click(object sender, EventArgs e)
+        {
+            Form formSupply = new FormSupply();
+            formSupply.Show();
+        }
+
+        private void ButtonOpenSupplies_Click(object sender, EventArgs e)
+        {
+            Form formDemand = new FormDemandSet();
+            formDemand.Show();
+        }
     }
 }

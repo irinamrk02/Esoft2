@@ -91,6 +91,7 @@
             this.labelMiddleName.Size = new System.Drawing.Size(97, 24);
             this.labelMiddleName.TabIndex = 3;
             this.labelMiddleName.Text = "Отчество";
+            this.labelMiddleName.Click += new System.EventHandler(this.LabelMiddleName_Click);
             // 
             // labelPhone
             // 

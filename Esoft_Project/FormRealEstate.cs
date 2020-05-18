@@ -410,7 +410,7 @@ namespace Esoft_Project
                 if (listViewRealEstateSet_Land.SelectedItems.Count == 1)
                 {
                     try
-                    {
+                    { 
                         RealEstateSet realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as RealEstateSet;
 
                         realEstate.Address_City = textBoxAddress_City.Text;

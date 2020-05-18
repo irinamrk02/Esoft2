@@ -112,5 +112,10 @@ namespace Esoft_Project
         {
 
         }
+
+        private void LabelMiddleName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

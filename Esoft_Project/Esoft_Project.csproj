@@ -61,6 +61,9 @@
     <Compile Include="ClientsSet.cs">
       <DependentUpon>ModelTutorial.tt</DependentUpon>
     </Compile>
+    <Compile Include="DemandSet.cs">
+      <DependentUpon>ModelTutorial.tt</DependentUpon>
+    </Compile>
     <Compile Include="FormAgentset.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +76,23 @@
     <Compile Include="FormClient.Designer.cs">
       <DependentUpon>FormClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDemandSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDemandSet.Designer.cs">
+      <DependentUpon>FormDemandSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRealEstate.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRealEstate.Designer.cs">
       <DependentUpon>FormRealEstate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupply.Designer.cs">
+      <DependentUpon>FormSupply.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -105,14 +120,23 @@
     <Compile Include="RealEstateSet.cs">
       <DependentUpon>ModelTutorial.tt</DependentUpon>
     </Compile>
+    <Compile Include="SupplySet.cs">
+      <DependentUpon>ModelTutorial.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAgentset.resx">
       <DependentUpon>FormAgentset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDemandSet.resx">
+      <DependentUpon>FormDemandSet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRealEstate.resx">
       <DependentUpon>FormRealEstate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupply.resx">
+      <DependentUpon>FormSupply.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
