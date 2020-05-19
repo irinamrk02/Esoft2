@@ -74,6 +74,7 @@ namespace Esoft_Project
             {
                 try
                 {
+
                     Agentset agentset = listViewAgent.SelectedItems[0].Tag as Agentset;
                     agentset.FirstName = textBoxFirstName.Text;
                     agentset.MiddleName = textBoxMiddleName.Text;
@@ -82,6 +83,10 @@ namespace Esoft_Project
                     if (agentset.DealShare < 0 || agentset.DealShare > 100)
                     {
                         throw new Exception("Доля от комиссии может принимать значение от 0 до 100");
+                    }
+                    if (agentset.FirstName == "" || agentset.MiddleName == "" || agentset.LastName == "")
+                    {
+                        throw new Exception("Заполните поля 'ФАМИЛИЯ', 'ИМЯ', 'ОТЧЕСТВО'!");
                     }
                     Program.wftDb.SaveChanges();
                     ShowAgent();
