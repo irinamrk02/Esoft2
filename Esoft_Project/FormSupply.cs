@@ -26,8 +26,8 @@ namespace Esoft_Project
             comboBoxAgents.Items.Clear();
             foreach (Agentset agentset in Program.wftDb.Agentset)
             {
-                string[] item = {agentset.id.ToString() + ".", agentset.FirstName,
-                agentset.MiddleName, agentset.LastName, agentset.DealShare.ToString() + "%"};
+                string[] item = {agentset.id.ToString() + ".", agentset.FirstName.Remove(1) + ".",
+                agentset.MiddleName.Remove(1) + ".", agentset.LastName, agentset.DealShare.ToString() + "%"};
                 comboBoxAgents.Items.Add(string.Join(" ", item));
             }
         }
@@ -37,8 +37,8 @@ namespace Esoft_Project
             comboBoxClients.Items.Clear();
             foreach (ClientsSet clientsSet in Program.wftDb.ClientsSet)
             {
-                string[] item = {clientsSet.id.ToString() + ".", clientsSet.FirstName,
-                clientsSet.MiddleName, clientsSet.LastName};
+                string[] item = {clientsSet.id.ToString() + ".", clientsSet.FirstName.Remove(1) + ".",
+                clientsSet.MiddleName.Remove(1) + ".", clientsSet.LastName};
                 comboBoxClients.Items.Add(string.Join(" ", item));
             }
         }
@@ -63,11 +63,11 @@ namespace Esoft_Project
                 ListViewItem item = new ListViewItem(new string[]
                 {
                     supply.idAgent.ToString(),
-                    supply.Agentset.LastName + " " + supply.Agentset.FirstName +
-                    " " + supply.Agentset.MiddleName,
+                    supply.Agentset.LastName + " " + supply.Agentset.FirstName.Remove(1) + "." 
+                    + supply.Agentset.MiddleName.Remove(1) + ".",
                     supply.idClient.ToString(),
-                    supply.ClientsSet.LastName + " " + supply.ClientsSet.FirstName + 
-                    " " + supply.ClientsSet.MiddleName,
+                    supply.ClientsSet.LastName + " " + supply.ClientsSet.FirstName .Remove(1) + "."
+                    + supply.ClientsSet.MiddleName,
                     supply.idRealEstate.ToString(),
                     "г. " + supply.RealEstateSet.Address_City + ", ул. " + 
                     supply.RealEstateSet.Address_Street + ", д. " + supply.RealEstateSet.Address_House

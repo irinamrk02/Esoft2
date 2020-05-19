@@ -115,6 +115,7 @@
             this.buttonOpenDeals.TabIndex = 6;
             this.buttonOpenDeals.Text = "Сделка";
             this.buttonOpenDeals.UseVisualStyleBackColor = false;
+            this.buttonOpenDeals.Click += new System.EventHandler(this.ButtonOpenDeals_Click);
             // 
             // Logo
             // 

@@ -186,27 +186,15 @@ namespace Esoft_Project
                 realEstate.Address_House = textBoxAddress_House.Text;
                 realEstate.Address_Street = textBoxAddress_Street.Text;
                 realEstate.Address_Number = textBoxAddress_Number.Text;
-                if (textBoxCoordinate_Iatitude.Text == "")
-                {
-                    textBoxCoordinate_Iatitude.Text = realEstate.Coordinate_Iatitude.ToString();
-                }
-                else
+                if (textBoxCoordinate_Iatitude.Text != "")
                 {
                     realEstate.Coordinate_Iatitude = Convert.ToDouble(textBoxCoordinate_Iatitude.Text);
                 }
-                if (textBoxCoordinate_Iongitude.Text == "")
-                {
-                    textBoxCoordinate_Iongitude.Text = realEstate.Coordinate_Iongitude.ToString();
-                }
-                else
+                if (textBoxCoordinate_Iongitude.Text != "")
                 {
                     realEstate.Coordinate_Iongitude = Convert.ToDouble(textBoxCoordinate_Iongitude.Text);
                 }
-                if (textBoxTotalArea.Text == "")
-                {
-                    textBoxTotalArea.Text = realEstate.TotalArea.ToString();
-                }
-                else
+                if (textBoxTotalArea.Text != "")
                 {
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                 }
@@ -225,19 +213,11 @@ namespace Esoft_Project
                 if (comboBoxType.SelectedIndex == 0)
                 {
                     realEstate.Type = 0;
-                    if (textBoxRooms.Text == "")
-                    {
-                        textBoxRooms.Text = realEstate.Rooms.ToString();
-                    }
-                    else
+                    if (textBoxRooms.Text != "")
                     {
                         realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
                     }
-                    if (textBoxFloor.Text == "")
-                    {
-                        textBoxFloor.Text = realEstate.Floor.ToString();
-                    }
-                    else
+                    if (textBoxFloor.Text != "")
                     {
                         realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
                     }
@@ -248,11 +228,7 @@ namespace Esoft_Project
                 else if (comboBoxType.SelectedIndex == 1)
                 {
                     realEstate.Type = 1;
-                    if (textBoxTotalFloors.Text == "")
-                    {
-                        textBoxTotalFloors.Text = realEstate.TotalFloors.ToString();
-                    }
-                    else
+                    if (textBoxTotalFloors.Text != "")
                     {
                         realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
                     }
@@ -286,43 +262,23 @@ namespace Esoft_Project
                         realEstate.Address_Street = textBoxAddress_Street.Text;
                         realEstate.Address_House = textBoxAddress_House.Text;
                         realEstate.Address_Number = textBoxAddress_Number.Text;
-                        if (textBoxCoordinate_Iatitude.Text == "")
-                        {
-                            textBoxCoordinate_Iatitude.Text = realEstate.Coordinate_Iatitude.ToString();
-                        }
-                        else
+                        if (textBoxCoordinate_Iatitude.Text != "")
                         {
                             realEstate.Coordinate_Iatitude = Convert.ToDouble(textBoxCoordinate_Iatitude.Text);
                         }
-                        if (textBoxCoordinate_Iongitude.Text == "")
-                        {
-                            textBoxCoordinate_Iongitude.Text = realEstate.Coordinate_Iongitude.ToString();
-                        }
-                        else
+                        if (textBoxCoordinate_Iongitude.Text != "")
                         {
                             realEstate.Coordinate_Iongitude = Convert.ToDouble(textBoxCoordinate_Iongitude.Text);
                         }
-                        if (textBoxTotalArea.Text == "")
-                        {
-                            textBoxTotalArea.Text = realEstate.TotalArea.ToString();
-                        }
-                        else
+                        if (textBoxTotalArea.Text != "")
                         {
                             realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                         }
-                        if (textBoxRooms.Text == "")
-                        {
-                            textBoxRooms.Text = realEstate.Rooms.ToString();
-                        }
-                        else
+                        if (textBoxRooms.Text != "")
                         {
                             realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
                         }
-                        if (textBoxFloor.Text == "")
-                        {
-                            textBoxFloor.Text = realEstate.Floor.ToString();
-                        }
-                        else
+                        if (textBoxFloor.Text != "")
                         {
                             realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
                         }
@@ -356,35 +312,19 @@ namespace Esoft_Project
                         realEstate.Address_House = textBoxAddress_House.Text;
                         realEstate.Address_Street = textBoxAddress_Street.Text;
                         realEstate.Address_Number = textBoxAddress_Number.Text;
-                        if (textBoxCoordinate_Iatitude.Text == "")
-                        {
-                            textBoxCoordinate_Iatitude.Text = realEstate.Coordinate_Iatitude.ToString();
-                        }
-                        else
+                        if (textBoxCoordinate_Iatitude.Text != "")
                         {
                             realEstate.Coordinate_Iatitude = Convert.ToDouble(textBoxCoordinate_Iatitude.Text);
                         }
-                        if (textBoxCoordinate_Iongitude.Text == "")
-                        {
-                            textBoxCoordinate_Iongitude.Text = realEstate.Coordinate_Iongitude.ToString();
-                        }
-                        else
+                        if (textBoxCoordinate_Iongitude.Text != "")
                         {
                             realEstate.Coordinate_Iongitude = Convert.ToDouble(textBoxCoordinate_Iongitude.Text);
                         }
-                        if (textBoxTotalArea.Text == "")
-                        {
-                            textBoxTotalArea.Text = realEstate.TotalArea.ToString();
-                        }
-                        else
+                        if (textBoxTotalArea.Text != "")
                         {
                             realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                         }
-                        if (textBoxTotalFloors.Text == "")
-                        {
-                            textBoxTotalFloors.Text = realEstate.TotalFloors.ToString();
-                        }
-                        else
+                        if (textBoxTotalFloors.Text != "")
                         {
                             realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
                         }
@@ -417,27 +357,15 @@ namespace Esoft_Project
                         realEstate.Address_House = textBoxAddress_House.Text;
                         realEstate.Address_Street = textBoxAddress_Street.Text;
                         realEstate.Address_Number = textBoxAddress_Number.Text;
-                        if (textBoxCoordinate_Iatitude.Text == "")
-                        {
-                            textBoxCoordinate_Iatitude.Text = realEstate.Coordinate_Iatitude.ToString();
-                        }
-                        else
+                        if (textBoxCoordinate_Iatitude.Text != "")
                         {
                             realEstate.Coordinate_Iatitude = Convert.ToDouble(textBoxCoordinate_Iatitude.Text);
                         }
-                        if (textBoxCoordinate_Iongitude.Text == "")
-                        {
-                            textBoxCoordinate_Iongitude.Text = realEstate.Coordinate_Iongitude.ToString();
-                        }
-                        else
+                        if (textBoxCoordinate_Iongitude.Text != "")
                         {
                             realEstate.Coordinate_Iongitude = Convert.ToDouble(textBoxCoordinate_Iongitude.Text);
                         }
-                        if (textBoxTotalArea.Text == "")
-                        {
-                            textBoxTotalArea.Text = realEstate.TotalArea.ToString();
-                        }
-                        else
+                        if (textBoxTotalArea.Text != "")
                         {
                             realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                         }

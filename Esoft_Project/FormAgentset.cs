@@ -43,11 +43,7 @@ namespace Esoft_Project
                 agentset.FirstName = textBoxFirstName.Text;
                 agentset.MiddleName = textBoxMiddleName.Text;
                 agentset.LastName = textBoxLastName.Text;
-                if (textBoxDealShare.Text == "")
-                {
-                    textBoxDealShare.Text = agentset.DealShare.ToString();
-                }
-                else
+                if (textBoxDealShare.Text != "")
                 {
                     agentset.DealShare = Convert.ToInt32(textBoxDealShare.Text);
                 }
