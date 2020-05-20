@@ -171,6 +171,10 @@ namespace Esoft_Project
                     DealSet deal = listViewDealSet.SelectedItems[0].Tag as DealSet;
                     deal.idSupply = Convert.ToInt32(comboBoxSupply.SelectedItem.ToString().Split('.')[0]);
                     deal.idDemand = Convert.ToInt32(comboBoxDemand.SelectedItem.ToString().Split('.')[0]);
+                    textBoxAgentCustomerDeductions.Enabled = false;
+                    textBoxAgentSellerDeductions.Enabled = false;
+                    textBoxSellerCompanyDeductions.Enabled = false;
+                    textCustomerCompanyDeductions.Enabled = false;
 
                     Program.wftDb.SaveChanges();
                     ShowDealSet();
@@ -209,6 +213,26 @@ namespace Esoft_Project
                 comboBoxSupply.SelectedItem = null;
                 comboBoxDemand.SelectedItem = null;
             }
+        }
+
+        private void TextBoxSellerCompanyDeductions_TextChanged(object sender, EventArgs e)
+        {
+            textBoxSellerCompanyDeductions.Enabled = false;
+        }
+
+        private void TextBoxAgentSellerDeductions_TextChanged(object sender, EventArgs e)
+        {
+            textBoxAgentSellerDeductions.Enabled = false;
+        }
+
+        private void TextCustomerCompanyDeductions_TextChanged(object sender, EventArgs e)
+        {
+            textCustomerCompanyDeductions.Enabled = false;
+        }
+
+        private void TextBoxAgentCustomerDeductions_TextChanged(object sender, EventArgs e)
+        {
+            textBoxAgentCustomerDeductions.Enabled = false;
         }
     }
 }
