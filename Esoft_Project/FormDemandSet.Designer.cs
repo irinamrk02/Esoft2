@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDemandSet));
             this.labelAgents = new System.Windows.Forms.Label();
             this.labelClients = new System.Windows.Forms.Label();
             this.labelRealEstate = new System.Windows.Forms.Label();
@@ -100,9 +101,9 @@
             this.labelAgents.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAgents.Location = new System.Drawing.Point(8, 102);
             this.labelAgents.Name = "labelAgents";
-            this.labelAgents.Size = new System.Drawing.Size(86, 24);
+            this.labelAgents.Size = new System.Drawing.Size(94, 24);
             this.labelAgents.TabIndex = 0;
-            this.labelAgents.Text = "Риелтор";
+            this.labelAgents.Text = "Риелтор*";
             this.labelAgents.Click += new System.EventHandler(this.Label1_Click);
             // 
             // labelClients
@@ -111,9 +112,9 @@
             this.labelClients.Font = new System.Drawing.Font("Roboto Light", 12F);
             this.labelClients.Location = new System.Drawing.Point(8, 164);
             this.labelClients.Name = "labelClients";
-            this.labelClients.Size = new System.Drawing.Size(76, 24);
+            this.labelClients.Size = new System.Drawing.Size(84, 24);
             this.labelClients.TabIndex = 1;
-            this.labelClients.Text = "Клиент";
+            this.labelClients.Text = "Клиент*";
             // 
             // labelRealEstate
             // 
@@ -121,9 +122,9 @@
             this.labelRealEstate.Font = new System.Drawing.Font("Roboto Light", 12F);
             this.labelRealEstate.Location = new System.Drawing.Point(8, 225);
             this.labelRealEstate.Name = "labelRealEstate";
-            this.labelRealEstate.Size = new System.Drawing.Size(124, 24);
+            this.labelRealEstate.Size = new System.Drawing.Size(132, 24);
             this.labelRealEstate.TabIndex = 2;
-            this.labelRealEstate.Text = "Тип объекта";
+            this.labelRealEstate.Text = "Тип объекта*";
             // 
             // labelMinPrice
             // 
@@ -482,7 +483,7 @@
             this.listViewHouse.FullRowSelect = true;
             this.listViewHouse.GridLines = true;
             this.listViewHouse.HideSelection = false;
-            this.listViewHouse.Location = new System.Drawing.Point(321, 35);
+            this.listViewHouse.Location = new System.Drawing.Point(322, 35);
             this.listViewHouse.MultiSelect = false;
             this.listViewHouse.Name = "listViewHouse";
             this.listViewHouse.Size = new System.Drawing.Size(1066, 685);
@@ -547,7 +548,7 @@
             this.listViewLand.FullRowSelect = true;
             this.listViewLand.GridLines = true;
             this.listViewLand.HideSelection = false;
-            this.listViewLand.Location = new System.Drawing.Point(321, 35);
+            this.listViewLand.Location = new System.Drawing.Point(322, 35);
             this.listViewLand.MultiSelect = false;
             this.listViewLand.Name = "listViewLand";
             this.listViewLand.Size = new System.Drawing.Size(1066, 685);
@@ -572,10 +573,12 @@
             // columnHeader30
             // 
             this.columnHeader30.Text = "ФИО клиента";
+            this.columnHeader30.Width = 74;
             // 
             // columnHeader32
             // 
             this.columnHeader32.Text = "Min цена";
+            this.columnHeader32.Width = 66;
             // 
             // columnHeader33
             // 
@@ -593,7 +596,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1449, 818);
+            this.ClientSize = new System.Drawing.Size(1425, 818);
             this.Controls.Add(this.listViewLand);
             this.Controls.Add(this.listViewHouse);
             this.Controls.Add(this.listViewApartment);
@@ -627,9 +630,11 @@
             this.Controls.Add(this.labelRealEstate);
             this.Controls.Add(this.labelClients);
             this.Controls.Add(this.labelAgents);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDemandSet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormDemandSet";
+            this.Text = "Потребности";
+            this.Load += new System.EventHandler(this.FormDemandSet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

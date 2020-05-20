@@ -164,15 +164,19 @@ namespace Esoft_Project
 
         private void ButtonEdit_Click(object sender, EventArgs e)
         {
-            if (listViewDealSet.SelectedItems.Count == 1)
+            try
             {
-                DealSet deal = listViewDealSet.SelectedItems[0].Tag as DealSet;
-                deal.idSupply = Convert.ToInt32(comboBoxSupply.SelectedItem.ToString().Split('.')[0]);
-                deal.idDemand = Convert.ToInt32(comboBoxDemand.SelectedItem.ToString().Split('.')[0]);
-                
-                Program.wftDb.SaveChanges();
-                ShowDealSet();
+                if (listViewDealSet.SelectedItems.Count == 1)
+                {
+                    DealSet deal = listViewDealSet.SelectedItems[0].Tag as DealSet;
+                    deal.idSupply = Convert.ToInt32(comboBoxSupply.SelectedItem.ToString().Split('.')[0]);
+                    deal.idDemand = Convert.ToInt32(comboBoxDemand.SelectedItem.ToString().Split('.')[0]);
+
+                    Program.wftDb.SaveChanges();
+                    ShowDealSet();
+                }
             }
+            catch { }
         }
 
         private void ButtonDel_Click(object sender, EventArgs e)

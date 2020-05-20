@@ -79,7 +79,11 @@ namespace Esoft_Project
                     agentset.FirstName = textBoxFirstName.Text;
                     agentset.MiddleName = textBoxMiddleName.Text;
                     agentset.LastName = textBoxLastName.Text;
-                    agentset.DealShare = Convert.ToInt32(textBoxDealShare.Text);
+                    if (textBoxDealShare.Text != "")
+                    {
+                        agentset.DealShare = Convert.ToInt32(textBoxDealShare.Text);
+                    }
+                    else agentset.DealShare = null;
                     if (agentset.DealShare < 0 || agentset.DealShare > 100)
                     {
                         throw new Exception("Доля от комиссии может принимать значение от 0 до 100");

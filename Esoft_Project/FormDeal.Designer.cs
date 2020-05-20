@@ -170,9 +170,9 @@
             this.labelSupply.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelSupply.Location = new System.Drawing.Point(8, 111);
             this.labelSupply.Name = "labelSupply";
-            this.labelSupply.Size = new System.Drawing.Size(136, 24);
+            this.labelSupply.Size = new System.Drawing.Size(144, 24);
             this.labelSupply.TabIndex = 38;
-            this.labelSupply.Text = "Предложения";
+            this.labelSupply.Text = "Предложения*";
             // 
             // labelDemand
             // 
@@ -180,9 +180,9 @@
             this.labelDemand.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDemand.Location = new System.Drawing.Point(7, 172);
             this.labelDemand.Name = "labelDemand";
-            this.labelDemand.Size = new System.Drawing.Size(130, 24);
+            this.labelDemand.Size = new System.Drawing.Size(138, 24);
             this.labelDemand.TabIndex = 39;
-            this.labelDemand.Text = "Потребность";
+            this.labelDemand.Text = "Потребность*";
             // 
             // labelSellerCompanyDeductions
             // 

@@ -190,15 +190,17 @@ namespace Esoft_Project
                 {
                     realEstate.Coordinate_Iatitude = Convert.ToDouble(textBoxCoordinate_Iatitude.Text);
                 }
+                else realEstate.Coordinate_Iatitude = null;
                 if (textBoxCoordinate_Iongitude.Text != "")
                 {
                     realEstate.Coordinate_Iongitude = Convert.ToDouble(textBoxCoordinate_Iongitude.Text);
                 }
+                else realEstate.Coordinate_Iongitude = null;
                 if (textBoxTotalArea.Text != "")
                 {
                     realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                 }
-
+                else realEstate.TotalArea = null;
                 if (realEstate.Coordinate_Iatitude < -90 || realEstate.Coordinate_Iatitude > 90)
                 {
                     throw new Exception("Широта принимает значения только от -90 до +90");
@@ -217,11 +219,12 @@ namespace Esoft_Project
                     {
                         realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
                     }
+                    else realEstate.Rooms = null;
                     if (textBoxFloor.Text != "")
                     {
                         realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
                     }
-
+                    else realEstate.Floor = null;
                 }
 
                 //доп. поля для дома
@@ -232,7 +235,7 @@ namespace Esoft_Project
                     {
                         realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
                     }
-
+                    else realEstate.TotalFloors = null;
                 }
 
                 //доп. поля для земли
@@ -266,22 +269,27 @@ namespace Esoft_Project
                         {
                             realEstate.Coordinate_Iatitude = Convert.ToDouble(textBoxCoordinate_Iatitude.Text);
                         }
+                        else realEstate.Coordinate_Iatitude = null;
                         if (textBoxCoordinate_Iongitude.Text != "")
                         {
                             realEstate.Coordinate_Iongitude = Convert.ToDouble(textBoxCoordinate_Iongitude.Text);
                         }
+                        else realEstate.Coordinate_Iongitude = null;
                         if (textBoxTotalArea.Text != "")
                         {
                             realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                         }
+                        else realEstate.TotalArea = null;
                         if (textBoxRooms.Text != "")
                         {
                             realEstate.Rooms = Convert.ToInt32(textBoxRooms.Text);
                         }
+                        else realEstate.Rooms = null;
                         if (textBoxFloor.Text != "")
                         {
                             realEstate.Floor = Convert.ToInt32(textBoxFloor.Text);
                         }
+                        else realEstate.Floor = null;
 
                         if (realEstate.Coordinate_Iatitude < -90 || realEstate.Coordinate_Iatitude > 90)
                         {
@@ -316,18 +324,22 @@ namespace Esoft_Project
                         {
                             realEstate.Coordinate_Iatitude = Convert.ToDouble(textBoxCoordinate_Iatitude.Text);
                         }
+                        else realEstate.Coordinate_Iatitude = null;
                         if (textBoxCoordinate_Iongitude.Text != "")
                         {
                             realEstate.Coordinate_Iongitude = Convert.ToDouble(textBoxCoordinate_Iongitude.Text);
                         }
+                        else realEstate.Coordinate_Iongitude = null;
                         if (textBoxTotalArea.Text != "")
                         {
                             realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                         }
+                        else realEstate.TotalArea = null;
                         if (textBoxTotalFloors.Text != "")
                         {
                             realEstate.TotalFloors = Convert.ToInt32(textBoxTotalFloors.Text);
                         }
+                        else realEstate.TotalFloors = null;
 
                         if (realEstate.Coordinate_Iatitude < -90 || realEstate.Coordinate_Iatitude > 90)
                         {
@@ -361,14 +373,17 @@ namespace Esoft_Project
                         {
                             realEstate.Coordinate_Iatitude = Convert.ToDouble(textBoxCoordinate_Iatitude.Text);
                         }
+                        else realEstate.Coordinate_Iatitude = null;
                         if (textBoxCoordinate_Iongitude.Text != "")
                         {
                             realEstate.Coordinate_Iongitude = Convert.ToDouble(textBoxCoordinate_Iongitude.Text);
                         }
+                        else realEstate.Coordinate_Iongitude = null;
                         if (textBoxTotalArea.Text != "")
                         {
                             realEstate.TotalArea = Convert.ToDouble(textBoxTotalArea.Text);
                         }
+                        else realEstate.TotalArea = null;
 
                         if (realEstate.Coordinate_Iatitude < -90 || realEstate.Coordinate_Iatitude > 90)
                         {

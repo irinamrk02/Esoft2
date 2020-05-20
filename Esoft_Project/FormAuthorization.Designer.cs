@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAuthorization));
             this.buttonOK = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,23 +47,11 @@
             this.buttonOK.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonOK.Location = new System.Drawing.Point(12, 199);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(200, 48);
+            this.buttonOK.Size = new System.Drawing.Size(424, 48);
             this.buttonOK.TabIndex = 0;
             this.buttonOK.Text = "Войти";
             this.buttonOK.UseVisualStyleBackColor = false;
             this.buttonOK.Click += new System.EventHandler(this.ButtonOK_Click);
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.BackColor = System.Drawing.SystemColors.Highlight;
-            this.buttonCancel.Font = new System.Drawing.Font("Roboto Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonCancel.Location = new System.Drawing.Point(242, 199);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(200, 48);
-            this.buttonCancel.TabIndex = 1;
-            this.buttonCancel.Text = "Отмена";
-            this.buttonCancel.UseVisualStyleBackColor = false;
             // 
             // textBoxLogin
             // 
@@ -148,7 +135,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxLogin);
-            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAuthorization";
@@ -163,7 +149,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonOK;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label1;

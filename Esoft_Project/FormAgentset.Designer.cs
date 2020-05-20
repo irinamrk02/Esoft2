@@ -175,9 +175,9 @@
             this.labelMiddleName.Font = new System.Drawing.Font("Roboto Light", 12F);
             this.labelMiddleName.Location = new System.Drawing.Point(16, 168);
             this.labelMiddleName.Name = "labelMiddleName";
-            this.labelMiddleName.Size = new System.Drawing.Size(97, 24);
+            this.labelMiddleName.Size = new System.Drawing.Size(105, 24);
             this.labelMiddleName.TabIndex = 18;
-            this.labelMiddleName.Text = "Отчество";
+            this.labelMiddleName.Text = "Отчество*";
             // 
             // labelLastName
             // 
@@ -185,9 +185,9 @@
             this.labelLastName.Font = new System.Drawing.Font("Roboto Light", 12F);
             this.labelLastName.Location = new System.Drawing.Point(15, 235);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(95, 24);
+            this.labelLastName.Size = new System.Drawing.Size(103, 24);
             this.labelLastName.TabIndex = 17;
-            this.labelLastName.Text = "Фамилия";
+            this.labelLastName.Text = "Фамилия*";
             // 
             // labelFirstName
             // 
@@ -195,9 +195,9 @@
             this.labelFirstName.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFirstName.Location = new System.Drawing.Point(16, 101);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(50, 24);
+            this.labelFirstName.Size = new System.Drawing.Size(58, 24);
             this.labelFirstName.TabIndex = 16;
-            this.labelFirstName.Text = "Имя";
+            this.labelFirstName.Text = "Имя*";
             // 
             // textBoxFirstName
             // 

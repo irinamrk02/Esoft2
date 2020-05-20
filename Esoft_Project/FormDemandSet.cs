@@ -143,8 +143,8 @@ namespace Esoft_Project
                 labelMaxFloors.Visible = false;
                 textBoxMaxFloors.Visible = false;
 
-                comboBoxAgents.SelectedItem = null;
-                comboBoxClients.SelectedItem = null;
+                comboBoxAgents.Text = "";
+                comboBoxClients.Text = "";
                 textBoxMinPrice.Text = "";
                 textBoxMaxPrice.Text = "";
                 textBoxMinArea.Text = "";
@@ -175,8 +175,8 @@ namespace Esoft_Project
                 labelMaxFloor.Visible = false;
                 textBoxMaxFloor.Visible = false;
 
-                comboBoxAgents.SelectedItem = null;
-                comboBoxClients.SelectedItem = null;
+                comboBoxAgents.Text = "";
+                comboBoxClients.Text = "";
                 textBoxMinPrice.Text = "";
                 textBoxMaxPrice.Text = "";
                 textBoxMinArea.Text = "";
@@ -205,8 +205,8 @@ namespace Esoft_Project
                 labelMaxFloors.Visible = false;
                 textBoxMaxFloors.Visible = false;
 
-                comboBoxAgents.SelectedItem = null;
-                comboBoxClients.SelectedItem = null;
+                comboBoxAgents.Text = "";
+                comboBoxClients.Text = "";
                 textBoxMinPrice.Text = "";
                 textBoxMaxPrice.Text = "";
                 textBoxMinArea.Text = "";
@@ -220,8 +220,8 @@ namespace Esoft_Project
             {
                 DemandSet demand = listViewLand.SelectedItems[0].Tag as DemandSet;
 
-                comboBoxAgents.SelectedItem = comboBoxAgents.FindString(demand.idAgent.ToString());
-                comboBoxClients.SelectedItem = comboBoxClients.FindString(demand.idClient.ToString());
+                comboBoxAgents.SelectedIndex = comboBoxAgents.FindString(demand.idAgent.ToString());
+                comboBoxClients.SelectedIndex = comboBoxClients.FindString(demand.idClient.ToString());
                 textBoxMinPrice.Text = demand.MinPrice.ToString();
                 textBoxMaxPrice.Text = demand.MaxPrice.ToString();
                 textBoxMinArea.Text = demand.MinArea.ToString();
@@ -244,8 +244,8 @@ namespace Esoft_Project
             {
                 DemandSet demand = listViewHouse.SelectedItems[0].Tag as DemandSet;
 
-                comboBoxAgents.SelectedItem = comboBoxAgents.FindString(demand.idAgent.ToString());
-                comboBoxClients.SelectedItem = comboBoxClients.FindString(demand.idClient.ToString());
+                comboBoxAgents.SelectedIndex = comboBoxAgents.FindString(demand.idAgent.ToString());
+                comboBoxClients.SelectedIndex = comboBoxClients.FindString(demand.idClient.ToString());
                 textBoxMinPrice.Text = demand.MinPrice.ToString();
                 textBoxMaxPrice.Text = demand.MaxPrice.ToString();
                 textBoxMinArea.Text = demand.MinArea.ToString();
@@ -272,8 +272,8 @@ namespace Esoft_Project
             {
                 DemandSet demand = listViewApartment.SelectedItems[0].Tag as DemandSet;
 
-                comboBoxAgents.SelectedItem = comboBoxAgents.FindString(demand.idAgent.ToString());
-                comboBoxClients.SelectedItem = comboBoxClients.FindString(demand.idClient.ToString());
+                comboBoxAgents.SelectedIndex = comboBoxAgents.FindString(demand.idAgent.ToString());
+                comboBoxClients.SelectedIndex = comboBoxClients.FindString(demand.idClient.ToString());
                 textBoxMinPrice.Text = demand.MinPrice.ToString();
                 textBoxMaxPrice.Text = demand.MaxPrice.ToString();
                 textBoxMinArea.Text = demand.MinArea.ToString();
@@ -292,7 +292,7 @@ namespace Esoft_Project
                 textBoxMinArea.Text = "";
                 textBoxMaxArea.Text = "";
                 textBoxMinRooms.Text = "";
-                textBoxMinRooms.Text = "";
+                textBoxMaxRooms.Text = "";
                 textBoxMinFloor.Text = "";
                 textBoxMaxFloor.Text = "";
             }
@@ -309,18 +309,22 @@ namespace Esoft_Project
                 {
                     demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text);
                 }
+                else demand.MinPrice = null;
                 if (textBoxMaxPrice.Text != "")
                 {
                     demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text);
                 }
+                else demand.MaxPrice = null;
                 if (textBoxMinArea.Text != "")
                 {
                     demand.MinArea = Convert.ToDouble(textBoxMinArea.Text);
                 }
+                else demand.MinArea = null;
                 if (textBoxMaxArea.Text != "")
                 {
                     demand.MaxArea = Convert.ToDouble(textBoxMaxArea.Text);
                 }
+                else demand.MaxArea = null;
                 
 
                 if (comboBoxRealEstate.SelectedIndex == 0)
@@ -330,18 +334,22 @@ namespace Esoft_Project
                     {
                         demand.MinRooms = Convert.ToInt32(textBoxMinRooms.Text);
                     }
+                    else demand.MinRooms = null;
                     if (textBoxMaxRooms.Text != "")
                     {
                         demand.MaxRooms = Convert.ToInt32(textBoxMaxRooms.Text);
                     }
+                    else demand.MaxRooms = null;
                     if (textBoxMinFloor.Text != "")
                     {
                         demand.MinFloor = Convert.ToInt32(textBoxMinFloor.Text);
                     }
+                    else demand.MinFloor = null;
                     if (textBoxMaxFloor.Text != "")
                     {
                         demand.MaxFloor = Convert.ToInt32(textBoxMaxFloor.Text);
                     }
+                    else demand.MaxFloor = null;
                 }
 
                 else if (comboBoxRealEstate.SelectedIndex == 1)
@@ -352,10 +360,12 @@ namespace Esoft_Project
                     {
                         demand.MinFloors = Convert.ToInt32(textBoxMinFloors.Text);
                     }
+                    else demand.MinFloors = null;
                     if (textBoxMaxFloors.Text != "")
                     {
                         demand.MaxFloors = Convert.ToInt32(textBoxMaxFloors.Text);
                     }
+                    else demand.MaxFloors = null;
                 }
 
                 else
@@ -384,34 +394,42 @@ namespace Esoft_Project
                         {
                             demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text);
                         }
+                        else demand.MinPrice = null;
                         if (textBoxMaxPrice.Text != "")
                         {
                             demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text);
                         }
+                        else demand.MaxPrice = null;
                         if (textBoxMinArea.Text != "")
                         {
                             demand.MinArea = Convert.ToDouble(textBoxMinArea.Text);
                         }
+                        else demand.MinArea = null;
                         if (textBoxMaxArea.Text != "")
                         {
                             demand.MaxArea = Convert.ToDouble(textBoxMaxArea.Text);
                         }
+                        else demand.MaxArea = null;
                         if (textBoxMinRooms.Text != "")
                         {
                             demand.MinRooms = Convert.ToInt32(textBoxMinRooms.Text);
                         }
+                        else demand.MinRooms = null;
                         if (textBoxMaxRooms.Text != "")
                         {
                             demand.MaxRooms = Convert.ToInt32(textBoxMaxRooms.Text);
                         }
+                        else demand.MaxRooms = null;
                         if (textBoxMinFloor.Text != "")
                         {
                             demand.MinFloor = Convert.ToInt32(textBoxMinFloor.Text);
                         }
+                        else demand.MinFloor = null;
                         if (textBoxMaxFloor.Text != "")
                         {
                             demand.MaxFloor = Convert.ToInt32(textBoxMaxFloor.Text);
                         }
+                        else demand.MaxFloor = null;
 
                         Program.wftDb.SaveChanges();
                         ShowDemandSet();
@@ -433,26 +451,32 @@ namespace Esoft_Project
                         {
                             demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text);
                         }
+                        else demand.MinPrice = null;
                         if (textBoxMaxPrice.Text != "")
                         {
                             demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text);
                         }
+                        else demand.MaxPrice = null;
                         if (textBoxMinArea.Text != "")
                         {
                             demand.MinArea = Convert.ToDouble(textBoxMinArea.Text);
                         }
+                        else demand.MinArea = null;
                         if (textBoxMaxArea.Text != "")
                         {
                             demand.MaxArea = Convert.ToDouble(textBoxMaxArea.Text);
                         }
+                        else demand.MaxArea = null;
                         if (textBoxMinFloors.Text != "")
                         {
                             demand.MinFloors = Convert.ToInt32(textBoxMinFloors.Text);
                         }
+                        else demand.MinFloors = null;
                         if (textBoxMaxFloors.Text != "")
                         {
                             demand.MaxFloors = Convert.ToInt32(textBoxMaxFloors.Text);
                         }
+                        else demand.MaxFloors = null;
 
                         Program.wftDb.SaveChanges();
                         ShowDemandSet();
@@ -475,18 +499,22 @@ namespace Esoft_Project
                         {
                             demand.MinPrice = Convert.ToInt64(textBoxMinPrice.Text);
                         }
+                        else demand.MinPrice = null;
                         if (textBoxMaxPrice.Text != "")
                         {
                             demand.MaxPrice = Convert.ToInt64(textBoxMaxPrice.Text);
                         }
+                        else demand.MaxPrice = null;
                         if (textBoxMinArea.Text != "")
                         {
                             demand.MinArea = Convert.ToDouble(textBoxMinArea.Text);
                         }
+                        else demand.MinArea = null;
                         if (textBoxMaxArea.Text != "")
                         {
                             demand.MaxArea = Convert.ToDouble(textBoxMaxArea.Text);
                         }
+                        else demand.MaxArea = null;
 
                         Program.wftDb.SaveChanges();
                         ShowDemandSet();
@@ -566,6 +594,11 @@ namespace Esoft_Project
                 MessageBox.Show("Невозможно удалить, эта запись используется!", "Ошибка!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FormDemandSet_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

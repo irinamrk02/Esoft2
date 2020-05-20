@@ -35,20 +35,20 @@
             this.labelRealEstate = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
             this.listViewSupplySet = new System.Windows.Forms.ListView();
+            this.columnIdAgent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnAgent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnIdClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnIdRealEstate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnRealEstate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.comboBoxRealEstate = new System.Windows.Forms.ComboBox();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.columnIdAgent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnIdClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnIdRealEstate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBoxAgents = new System.Windows.Forms.ComboBox();
             this.comboBoxClients = new System.Windows.Forms.ComboBox();
-            this.columnAgent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnRealEstate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,9 +66,9 @@
             this.labelAgent.Font = new System.Drawing.Font("Roboto Light", 12F);
             this.labelAgent.Location = new System.Drawing.Point(18, 29);
             this.labelAgent.Name = "labelAgent";
-            this.labelAgent.Size = new System.Drawing.Size(86, 24);
+            this.labelAgent.Size = new System.Drawing.Size(94, 24);
             this.labelAgent.TabIndex = 1;
-            this.labelAgent.Text = "Риелтор";
+            this.labelAgent.Text = "Риелтор*";
             // 
             // labelClient
             // 
@@ -76,9 +76,9 @@
             this.labelClient.Font = new System.Drawing.Font("Roboto Light", 12F);
             this.labelClient.Location = new System.Drawing.Point(18, 100);
             this.labelClient.Name = "labelClient";
-            this.labelClient.Size = new System.Drawing.Size(76, 24);
+            this.labelClient.Size = new System.Drawing.Size(84, 24);
             this.labelClient.TabIndex = 2;
-            this.labelClient.Text = "Клиент";
+            this.labelClient.Text = "Клиент*";
             // 
             // labelRealEstate
             // 
@@ -86,9 +86,9 @@
             this.labelRealEstate.Font = new System.Drawing.Font("Roboto Light", 12F);
             this.labelRealEstate.Location = new System.Drawing.Point(18, 174);
             this.labelRealEstate.Name = "labelRealEstate";
-            this.labelRealEstate.Size = new System.Drawing.Size(220, 24);
+            this.labelRealEstate.Size = new System.Drawing.Size(228, 24);
             this.labelRealEstate.TabIndex = 3;
-            this.labelRealEstate.Text = "Объект недвижимости";
+            this.labelRealEstate.Text = "Объект недвижимости*";
             this.labelRealEstate.Click += new System.EventHandler(this.LabelRealEstate_Click);
             // 
             // labelPrice
@@ -97,9 +97,9 @@
             this.labelPrice.Font = new System.Drawing.Font("Roboto Light", 12F);
             this.labelPrice.Location = new System.Drawing.Point(18, 247);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(56, 24);
+            this.labelPrice.Size = new System.Drawing.Size(64, 24);
             this.labelPrice.TabIndex = 4;
-            this.labelPrice.Text = "Цена";
+            this.labelPrice.Text = "Цена*";
             // 
             // listViewSupplySet
             // 
@@ -123,6 +123,38 @@
             this.listViewSupplySet.UseCompatibleStateImageBehavior = false;
             this.listViewSupplySet.View = System.Windows.Forms.View.Details;
             this.listViewSupplySet.SelectedIndexChanged += new System.EventHandler(this.ListViewSupplySet_SelectedIndexChanged);
+            // 
+            // columnIdAgent
+            // 
+            this.columnIdAgent.Text = "id риелтора";
+            this.columnIdAgent.Width = 104;
+            // 
+            // columnAgent
+            // 
+            this.columnAgent.Text = "ФИО риелтора";
+            this.columnAgent.Width = 124;
+            // 
+            // columnIdClient
+            // 
+            this.columnIdClient.Text = "id клиента";
+            this.columnIdClient.Width = 99;
+            // 
+            // columnClient
+            // 
+            this.columnClient.Text = "ФИО клиента";
+            // 
+            // columnIdRealEstate
+            // 
+            this.columnIdRealEstate.Text = "id объекта недвижимости";
+            this.columnIdRealEstate.Width = 226;
+            // 
+            // columnRealEstate
+            // 
+            this.columnRealEstate.Text = "Объект недвижимости";
+            // 
+            // columnPrice
+            // 
+            this.columnPrice.Text = "Цена";
             // 
             // buttonEdit
             // 
@@ -182,25 +214,6 @@
             this.Logo.TabIndex = 20;
             this.Logo.TabStop = false;
             // 
-            // columnIdAgent
-            // 
-            this.columnIdAgent.Text = "id риелтора";
-            this.columnIdAgent.Width = 104;
-            // 
-            // columnIdClient
-            // 
-            this.columnIdClient.Text = "id клиента";
-            this.columnIdClient.Width = 99;
-            // 
-            // columnIdRealEstate
-            // 
-            this.columnIdRealEstate.Text = "id объекта недвижимости";
-            this.columnIdRealEstate.Width = 226;
-            // 
-            // columnPrice
-            // 
-            this.columnPrice.Text = "Цена";
-            // 
             // comboBoxAgents
             // 
             this.comboBoxAgents.Font = new System.Drawing.Font("Roboto Light", 12F);
@@ -218,19 +231,6 @@
             this.comboBoxClients.Name = "comboBoxClients";
             this.comboBoxClients.Size = new System.Drawing.Size(443, 32);
             this.comboBoxClients.TabIndex = 22;
-            // 
-            // columnAgent
-            // 
-            this.columnAgent.Text = "ФИО риелтора";
-            this.columnAgent.Width = 124;
-            // 
-            // columnClient
-            // 
-            this.columnClient.Text = "ФИО клиента";
-            // 
-            // columnRealEstate
-            // 
-            this.columnRealEstate.Text = "Объект недвижимости";
             // 
             // FormSupply
             // 
